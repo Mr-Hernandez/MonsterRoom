@@ -10,5 +10,6 @@ ZombieEnemy::ZombieEnemy(){
 	auto rtexture = TextureResourceManager::getInstance().getTexture(textureID);
 	sf::Texture& atexture= *rtexture;
 	sprite.setTexture(atexture);
-	
+	textureRect = sf::IntRect(0, 0, 64, 64);
+	sprite.setTextureRect(textureRect);
 }

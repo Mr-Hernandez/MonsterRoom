@@ -19,6 +19,7 @@ protected:
 	//sf::Texture* texture;
 	sf::Texture tmpTexture;
 	sf::Sprite sprite;
+	sf::IntRect textureRect;
 	// Behaviors Here
 
 
