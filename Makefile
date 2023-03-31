@@ -8,7 +8,7 @@ CXXFLAGS = -std=c++11 -Wall -Wextra -pedantic
 LIBS = -lsfml-graphics -lsfml-window -lsfml-system
 
 # Object files
-OBJ = main.o Enemies.o ZombieEnemy.o
+OBJ = main.o Enemies.o ZombieEnemy.o MoveLikePoolBall.o
 
 # Target
 MonsterRoom: $(OBJ)
@@ -22,6 +22,9 @@ ZombieEnemy.o: ZombieEnemy.cpp ZombieEnemy.hpp Enemies.hpp TextureResourceManage
 
 Enemy.o: Enemies.cpp Enemies.hpp TextureResourceManager.hpp
 	$(CXX) $(CXXFLAGS) -c Enemies.cpp
+
+MoveLikePoolBall.o: MoveLikePoolBall.cpp MoveLikePoolBall.hpp MoveBehavior.hpp
+	$(CXX) $(CXXFLAGS) -c MoveLikePoolBall.cpp
 
 clean:
 	rm $(OBJ) MonsterRoom
