@@ -15,3 +15,7 @@ Enemies::Enemies(){
 sf::Sprite* Enemies::getSprite(){
 	return &sprite;
 }
+
+void Enemies::updateSpritePos(sf::Vector2f newPos){
+	sprite.setPosition(newPos);
+}

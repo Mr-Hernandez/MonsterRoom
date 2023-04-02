@@ -3,12 +3,15 @@
 
 #include "Enemies.hpp"
 #include "TextureResourceManager.hpp"
+#include "MoveLikePoolBall.hpp"
 
 class ZombieEnemy : public Enemies {
 public:
 	void Foo();
 	ZombieEnemy();
-	// assign new behavior here
+	void move();
+
+	~ZombieEnemy();	
 };
 
 

@@ -2,6 +2,7 @@
 #define ENEMIES_HPP
 
 #include <SFML/Graphics.hpp>
+#include "MoveBehavior.hpp"
 
 class Enemies{
 public:
@@ -9,7 +10,7 @@ public:
 	
 	Enemies();
 	sf::Sprite* getSprite();
-
+	void updateSpritePos(sf::Vector2f newPos);
 	virtual ~Enemies(){}
 
 protected:
@@ -20,7 +21,10 @@ protected:
 	sf::Texture tmpTexture;
 	sf::Sprite sprite;
 	sf::IntRect textureRect;
+
+
 	// Behaviors Here
+	MoveBehavior* moveBehavior;	
 
 
 };
