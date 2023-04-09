@@ -18,10 +18,10 @@ int main()
             if (event.type == sf::Event::Closed)
                 window.close();
         }
-	Zombie1.move();
+	    Zombie1.move();
         window.clear();
         window.draw(shape);
-	window.draw(*(Zombie1.getSprite()));
+	    window.draw(*(Zombie1.getSprite()));
         window.display();
     }
 
