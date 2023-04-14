@@ -3,6 +3,7 @@
 
 #include "SFML/Graphics.hpp"
 #include "TextureResourceManager.hpp"
+#include "MyTime.h"
 #include "ZombieEnemy.hpp"
 #include "State.hpp"
 
@@ -13,12 +14,13 @@ public:
     void input();
     void update();
     void render();
-
+    
     void setState();
 
 protected:
 	sf::RenderWindow* pWindow;
-    State* state;    
+    State* state;
+    MyTime myTime;
 	
     ZombieEnemy zombie1;
 	
